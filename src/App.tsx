@@ -1,5 +1,4 @@
-import "./App.css";
-
+import React from "react";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -8,7 +7,8 @@ import Cadastro from "./pages/cadastro/Cadastro";
 import Home from "./pages/home/Home";
 import { AuthProvider } from "./contexts/AuthContext";
 import ListaCategoria from "./components/categorias/listaCategorias/ListaCategorias";
-import FormularioCategoria from "./components/categorias/formularioCategoria/FormularioCategoria";
+import FormularioEditarCategoria from "./components/categorias/formularioCategoria/FormularioEditarCategoria";
+import FormularioCadastrarCategoria from "./components/categorias/formularioCategoria/FormularioCadastrarCategoria";
 
 function App() {
   return (
@@ -23,8 +23,8 @@ function App() {
               <Route path="/cadastro" element={<Cadastro />} />
               <Route path="/home" element={<Home />} />
               <Route path="/categorias" element={<ListaCategoria />} />
-              <Route path="/categoriasnovo" element={<FormularioCategoria />} />
-              <Route path="/editarCategoria/:id" element={<FormularioCategoria />}/>
+              <Route path="/cadastrarCategoria" element={<FormularioCadastrarCategoria />} />
+              <Route path="/editarCategoria/:id" element={<FormularioEditarCategoria />} />
             </Routes>
           </div>
           <Footer />

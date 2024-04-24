@@ -1,4 +1,4 @@
-import React from "react";
+//import React from "react";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -9,6 +9,12 @@ import { AuthProvider } from "./contexts/AuthContext";
 import ListaCategoria from "./components/categorias/listaCategorias/ListaCategorias";
 import FormularioEditarCategoria from "./components/categorias/formularioCategoria/FormularioEditarCategoria";
 import FormularioCadastrarCategoria from "./components/categorias/formularioCategoria/FormularioCadastrarCategoria";
+import DeletarCategoria from "./components/categorias/deletarCategoria/DeletarCategoria";
+import ListaProdutos from "./components/produtos/listaProdutos/ListaProdutos";
+import FormularioEditarProduto from "./components/produtos/formularioProduto/FormularioEditarProduto";
+import About from "./pages/about/About";
+import FormularioCadastrarProduto from "./components/produtos/formularioProduto/FormularioCadastrarProduto";
+import DeletarProduto from "./components/produtos/deletarProduto/DeletarProduto";
 
 function App() {
   return (
@@ -25,6 +31,12 @@ function App() {
               <Route path="/categorias" element={<ListaCategoria />} />
               <Route path="/cadastrarCategoria" element={<FormularioCadastrarCategoria />} />
               <Route path="/editarCategoria/:id" element={<FormularioEditarCategoria />} />
+              <Route path="/deletarCategoria/:id" element={<DeletarCategoria />} />
+              <Route path="/produtos" element={<ListaProdutos />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/editarProduto/:id" element={<FormularioEditarProduto />} />
+              <Route path="/cadastrarProduto" element={<FormularioCadastrarProduto />} />
+              <Route path="/deletarProduto/:id" element={<DeletarProduto />} />
             </Routes>
           </div>
           <Footer />

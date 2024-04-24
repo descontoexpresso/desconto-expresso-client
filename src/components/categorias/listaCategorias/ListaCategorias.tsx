@@ -8,7 +8,9 @@ import { useNavigate } from "react-router-dom";
 import { Dna } from "react-loader-spinner";
 
 function ListaCategorias() {
-const [categorias, setCategorias] = useState <Categoria[]>([]);
+const [categorias, setCategorias] = useState <Categoria[]>([{ id: 0,
+  descricaoCategoria: 'string',
+  nomeCategoria: 'string',}] as Categoria[]);
 
 const navigate = useNavigate();
 

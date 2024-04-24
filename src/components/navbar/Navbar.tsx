@@ -21,10 +21,18 @@ function Navbar() {
             <Link to="/cadastrarCategoria" className="hover:underline">
               Cadastrar Categoria
             </Link>
+            <Link to="/produtos" className="hover:underline">
+              Produtos
+            </Link> 
+            <Link to="/cadastrarProduto" className="hover:underline">
+              Cadastrar Produto
+            </Link> 
+            <Link to="/about" className="hover:underline">
+            About
+            </Link> <Link to="/sair" className="hover:underline">
+            Sair
+            </Link>
 
-            <div className="hover:underline">Produtos</div>
-            <div className="hover:underline">Perfil</div>
-            <div className="hover:underline">Sair</div>
           </div>
         </div>
       </div>

@@ -170,7 +170,7 @@ function FormularioCadastrarProduto() {
                     <select name="categoria" id="categoria" className='border p-2 border-slate-800 rounded' onChange={(e) => setCategoria(categorias.find(c => c.id === parseInt(e.target.value))!)}>
                         <option value="" disabled>Selecione uma Categoria</option>
                         {categorias.map((categoria) => (
-                            <option key={categoria.id} value={categoria.id}>{categoria.descricaoCategoria}</option>
+                            <option key={categoria.id} value={categoria.id}>{categoria.nomeCategoria}</option>
                         ))}
                     </select>
                 </div>

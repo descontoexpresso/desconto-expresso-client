@@ -15,6 +15,7 @@ import FormularioEditarProduto from "./components/produtos/formularioProduto/For
 import About from "./pages/about/About";
 import FormularioCadastrarProduto from "./components/produtos/formularioProduto/FormularioCadastrarProduto";
 import DeletarProduto from "./components/produtos/deletarProduto/DeletarProduto";
+import ProdutoPage from "./pages/product/ProductPage";
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
               <Route path="/editarProduto/:id" element={<FormularioEditarProduto />} />
               <Route path="/cadastrarProduto" element={<FormularioCadastrarProduto />} />
               <Route path="/deletarProduto/:id" element={<DeletarProduto />} />
+              <Route path="/pageProduto/:id" element={<ProdutoPage />} />
             </Routes>
           </div>
           <Footer />

@@ -1,4 +1,55 @@
 .square {
     width: 985px;
     height: 628px;
+
+}
+
+span {
+    width: 430px;
+}
+
+.btn {
+    width: 244px;
+    border: 2px solid black;
+    border-radius: 24px;
+    font-weight: bold;
+
+}
+
+button:hover {
+    border-color: #FFF5C1;
+    color: #FFF5C1;
+    transition: ease-in-out all .4s;
+
+}
+
+
+.side {
+    width: 745px;
+    height: 302px;
+    background-color: #E8F4C3;
+    border: none;
+}
+
+.side:hover {
+    transform: scale(1.02);
+    transition: ease-in-out all .4s;
+}
+
+#top {
+    background-color: #FFF5C1
+}
+
+.side span {
+    width: 300px;
+    font-size: 26px;
+    line-height: 1.1;
+
+
+}
+
+.side img {
+    width: 484px;
+    height: 326px;
+    margin-right: -100px;
 }

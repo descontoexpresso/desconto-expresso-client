@@ -16,6 +16,7 @@ import About from "./pages/about/About";
 import FormularioCadastrarProduto from "./components/produtos/formularioProduto/FormularioCadastrarProduto";
 import DeletarProduto from "./components/produtos/deletarProduto/DeletarProduto";
 import ProdutoPage from "./pages/product/ProductPage";
+import Perfil from "./pages/perfil/Perfil";
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
               />
               <Route path="/produtos" element={<ListaProdutos />} />
               <Route path="/about" element={<About />} />
+              <Route path="/perfil" element={<Perfil />} />
               <Route
                 path="/editarProduto/:id"
                 element={<FormularioEditarProduto />}

@@ -49,6 +49,7 @@ function Navbar() {
             <Link to="/about" className="hover:underline">
               About
             </Link>
+            <Link to='/perfil' className='hover:underline'>Perfil</Link>
             <Link to="/home" onClick={logout} className="hover:underline">
               Sair
             </Link>

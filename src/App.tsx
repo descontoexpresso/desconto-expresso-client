@@ -30,13 +30,28 @@ function App() {
               <Route path="/cadastro" element={<Cadastro />} />
               <Route path="/home" element={<Home />} />
               <Route path="/categorias" element={<ListaCategoria />} />
-              <Route path="/cadastrarCategoria" element={<FormularioCadastrarCategoria />} />
-              <Route path="/editarCategoria/:id" element={<FormularioEditarCategoria />} />
-              <Route path="/deletarCategoria/:id" element={<DeletarCategoria />} />
+              <Route
+                path="/cadastrarCategoria"
+                element={<FormularioCadastrarCategoria />}
+              />
+              <Route
+                path="/editarCategoria/:id"
+                element={<FormularioEditarCategoria />}
+              />
+              <Route
+                path="/deletarCategoria/:id"
+                element={<DeletarCategoria />}
+              />
               <Route path="/produtos" element={<ListaProdutos />} />
               <Route path="/about" element={<About />} />
-              <Route path="/editarProduto/:id" element={<FormularioEditarProduto />} />
-              <Route path="/cadastrarProduto" element={<FormularioCadastrarProduto />} />
+              <Route
+                path="/editarProduto/:id"
+                element={<FormularioEditarProduto />}
+              />
+              <Route
+                path="/cadastrarProduto"
+                element={<FormularioCadastrarProduto />}
+              />
               <Route path="/deletarProduto/:id" element={<DeletarProduto />} />
               <Route path="/pageProduto/:id" element={<ProdutoPage />} />
             </Routes>

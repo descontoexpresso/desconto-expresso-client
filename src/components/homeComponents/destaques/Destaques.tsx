@@ -12,9 +12,9 @@ function Destaques() {
   };
 
   return (
-    <div className="flex gap-8  p-11 items-center justify-center flex-wrap">
-      <div className="square bg-[url('./assets/produtos-destaque.jpg')] bg-contain bg-center bg-no-repeat bg-cover rounded-xl flex justify-center items-center  flex-col">
-        <span className=" text-4xl  font-semibold text-center">
+    <div className="main  flex gap-8   items-center justify-center ">
+      <div className="square bg-[url('./assets/produtos-destaque.jpg')] bg-contain bg-center bg-no-repeat bg-cover  flex justify-center items-center  flex-col">
+        <span className=" main-imagem  font-semibold text-center">
           Inovando para tornar o mercado mais justo e acessível a todos!
         </span>
         <button
@@ -24,20 +24,19 @@ function Destaques() {
           Veja mais
         </button>
       </div>
-      <div className="flex  flex-col gap-8">
+      <div className=" aa flex  flex-col gap-8">
         <div
           id="top"
-          className="side top bg-[url()] border border-sky- 600 rounded-xl  flex justify-center items-center  overflow-hidden "
+          className="side top   rounded-xl  flex justify-center items-center  overflow-hidden "
         >
-          <span className="  text-base font-semibold text-center">
+          <span className="  font-semibold text-center">
             Laticínios para a sua jornada de saúde e bem-estar!
           </span>
           <img src={sideTop} alt="" />
         </div>
-        <div className="side bg-[url()] border border-sky- 600 rounded-xl  flex justify-center items-center overflow-hidden ">
-          <span className="  text-base font-semibold text-center">
-            Frutas e vegetais frescos para todos: saúde acessível, sabor
-            inigualável!
+        <div className="side  rounded-xl  flex justify-center items-center overflow-hidden ">
+          <span className=" font-semibold text-center">
+            Todos legumes e verduras fresco para todos{" "}
           </span>
           <img src={sideDown} alt="" />
         </div>

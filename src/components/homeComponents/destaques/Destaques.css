@@ -1,7 +1,18 @@
 .square {
-    width: 985px;
+    width: 100%;
+    max-width: 985px;
     height: 628px;
+    border-radius: 12px;
+    font-size: clamp(16px, 3vw, 30px);
+}
 
+.main {
+    padding: 44px;
+
+}
+
+.aa {
+    padding: 2px;
 }
 
 span {
@@ -25,10 +36,13 @@ button:hover {
 
 
 .side {
-    width: 745px;
+    width: 100%;
+    max-width: 745px;
     height: 302px;
     background-color: #E8F4C3;
     border: none;
+    /* padding: 0 60px; */
+
 }
 
 .side:hover {
@@ -42,14 +56,56 @@ button:hover {
 
 .side span {
     width: 300px;
-    font-size: 26px;
+    /* font-size: 16px; */
+    font-size: clamp(20px, 3vw, 24px);
+    padding: 0 10px;
     line-height: 1.1;
 
 
 }
 
+
 .side img {
     width: 484px;
     height: 326px;
     margin-right: -100px;
+}
+
+@media (max-width: 900px) {
+
+    .main {
+        flex-wrap: wrap;
+        padding-top: 0;
+        padding: 0 0;
+
+    }
+
+    .square {
+        border-radius: 0;
+    }
+
+    .side span {
+        max-width: 100%;
+        /* Define a largura máxima como 100% */
+    }
+}
+
+@media (max-width: 550px) {
+    .side img {
+        display: none;
+        /* Esconde a imagem */
+    }
+
+    .main-imagem {
+        font-weight: bold;
+        text-align: center;
+        word-break: break-all;
+        width: 210px;
+    }
+
+    .btn {
+        width: 210px;
+        ;
+
+    }
 }

@@ -4,7 +4,6 @@ import { AuthContext } from "../../../contexts/AuthContext";
 import Produto from "../../../models/Produto";
 import Categoria from "../../../models/Categoria";
 import { buscar, atualizar } from "../../../services/Service";
-import Produto from './../../../models/Produto';
 
 function FormularioEditarProduto() {
   const navigate = useNavigate();

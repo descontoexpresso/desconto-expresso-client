@@ -4,6 +4,7 @@ import { AuthContext } from "../../../contexts/AuthContext";
 import Produto from "../../../models/Produto";
 import Categoria from "../../../models/Categoria";
 import { buscar, atualizar } from "../../../services/Service";
+import Produto from './../../../models/Produto';
 
 function FormularioEditarProduto() {
   const navigate = useNavigate();
@@ -18,6 +19,7 @@ function FormularioEditarProduto() {
     id: 0,
     nomeCategoria: "",
     descricaoCategoria: "",
+    fotoCategoria: "", // Add the missing property 'fotoCategoria'
   });
   const [produto, setProduto] = useState<Produto>({
     id: 0,
@@ -30,7 +32,7 @@ function FormularioEditarProduto() {
     categoria: null,
     usuario: null,
   });
-
+  
   async function buscarProdutoPorId(id: string) {
     await buscar(`/produtos/${id}`, setProduto, {
       headers: {

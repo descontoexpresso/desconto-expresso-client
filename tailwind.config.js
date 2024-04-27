@@ -18,8 +18,7 @@ export default {
        
       },
       backgroundImage: {
-        "fundo-produtos-destaque": "url('./scr/assets/produtos-destaque.jpg')",
-        sideDown: "url('./scr/assets/sidedown')",
+        "fundo-cadastros": "url('./src/assets/fundoCad.png')",
       },
     },
   },

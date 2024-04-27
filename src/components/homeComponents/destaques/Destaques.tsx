@@ -29,13 +29,13 @@ function Destaques() {
           id="top"
           className="side top   rounded-xl  flex justify-center items-center  overflow-hidden "
         >
-          <span className="  font-semibold text-center">
+          <span className=" -mr-6 font-semibold text-center">
             Laticínios para a sua jornada de saúde e bem-estar!
           </span>
           <img src={sideTop} alt="" />
         </div>
         <div className="side  rounded-xl  flex justify-center items-center overflow-hidden ">
-          <span className=" font-semibold text-center">
+          <span className="-mr-6 font-semibold text-center">
             Todos legumes e verduras fresco para todos{" "}
           </span>
           <img src={sideDown} alt="" />

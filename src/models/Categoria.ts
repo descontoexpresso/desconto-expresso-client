@@ -1,5 +1,6 @@
 export default interface Categoria {
-    id: number;
-    descricaoCategoria: string;
-    nomeCategoria: string;
+  id: number;
+  fotoCategoria: string;
+  descricaoCategoria: string;
+  nomeCategoria: string;
 }

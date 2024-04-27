@@ -1,11 +1,13 @@
-import { ChangeEvent, useContext, useEffect, useState } from 'react';
+import { ChangeEvent, useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { AuthContext } from "../../../contexts/AuthContext";
 import Categoria from "../../../models/Categoria";
 import { atualizar, buscar } from "../../../services/Service";
 
-function FormularioCategoria() {
+function FormularioEditarCategoria() {
   const [categoria, setCategoria] = useState<Categoria>({} as Categoria);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [foto, setFoto] = useState<string | null>(null); // Altera para string
   const navigate = useNavigate();
   const { id } = useParams<{ id: string }>();
   const categoriaId = parseInt(id ?? "");
@@ -59,34 +61,70 @@ function FormularioCategoria() {
   }, [token]);
 
   return (
-    <div className="container flex flex-col items-center justify-center mx-auto">
-      <h1 className="text-4xl text-center my-8">
+    <div
+      className="container flex flex-col items-center justify-center mx-auto bg-fundo-cadastros bg-cover bg-center bg-no-repeat "
+      style={{ minHeight: "80vh", minWidth: "100%" }}
+    >
+      <h1 className="text-4xl text-center my-8 mb-1 text-verde-escuro">
         Editar Categoria
       </h1>
 
-      <form className="w-1/2 flex flex-col gap-4" onSubmit={editarCategoria}>
-        <div className="flex flex-col gap-2">
-          <label htmlFor="nomeCategoria">Nome da Categoria</label>
+      <form
+        className="w-1/2 flex flex-col gap-4 bg-white bg-opacity-0 rounded-lg p-8"
+        onSubmit={editarCategoria}
+      >
+        <div className="  flex flex-col gap-2">
+          <label
+            className=" text-verde-escuro font-semibold"
+            htmlFor="nomeCategoria"
+          >
+            Nome da Categoria
+          </label>
           <input
             type="text"
             placeholder="Nome"
             name="nomeCategoria"
             className="border-2 border-slate-700 rounded p-2"
             value={categoria.nomeCategoria}
-            onChange={(e: ChangeEvent<HTMLInputElement>) => setCategoria({...categoria, [e.target.name]: e.target.value})}
+            onChange={(e: ChangeEvent<HTMLInputElement>) =>
+              setCategoria({ ...categoria, [e.target.name]: e.target.value })
+            }
           />
-          <label htmlFor="descricaoCategoria">Descrição da Categoria</label>
+          <label
+            className=" text-verde-escuro font-semibold"
+            htmlFor="descricaoCategoria"
+          >
+            Descrição da Categoria
+          </label>
           <input
             type="text"
             placeholder="Descrição"
             name="descricaoCategoria"
             className="border-2 border-slate-700 rounded p-2"
             value={categoria.descricaoCategoria}
-            onChange={(e: ChangeEvent<HTMLInputElement>) => setCategoria({...categoria, [e.target.name]: e.target.value})}
+            onChange={(e: ChangeEvent<HTMLInputElement>) =>
+              setCategoria({ ...categoria, [e.target.name]: e.target.value })
+            }
+          />
+          <label
+            className=" text-verde-escuro font-semibold"
+            htmlFor="fotoCategoria"
+          >
+            Novo Link da Foto da Categoria
+          </label>
+          <input
+            type="text" // Altera para text
+            placeholder="Link da Foto"
+            name="fotoCategoria"
+            className="border-2 border-slate-700 rounded p-2"
+            value={categoria.fotoCategoria}
+            onChange={(e: ChangeEvent<HTMLInputElement>) =>
+              setCategoria({ ...categoria, [e.target.name]: e.target.value })
+            }
           />
         </div>
         <button
-          className="rounded text-slate-100 bg-indigo-400 hover:bg-indigo-800 w-1/2 py-2 mx-auto block"
+          className="rounded text-slate-100 bg-verde-escuro hover:bg-verde-medio-hover text-white w-1/2 py-2 mx-auto block mt-5 transition-colors duration-300 ease-in-out hover:delay-300"
           type="submit"
         >
           Editar
@@ -96,4 +134,4 @@ function FormularioCategoria() {
   );
 }
 
-export default FormularioCategoria;
+export default FormularioEditarCategoria;

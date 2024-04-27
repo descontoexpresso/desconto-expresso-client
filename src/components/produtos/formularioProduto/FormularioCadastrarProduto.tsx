@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useContext, useEffect, useState } from 'react';
+import { ChangeEvent, useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthContext';
 import Produto from '../../../models/Produto';
@@ -16,6 +16,7 @@ function FormularioCadastrarProduto() {
         id: 0,
         nomeCategoria: '',
         descricaoCategoria: '',
+        fotoCategoria: '',
     });
 
     const [produto, setProduto] = useState<Produto>({

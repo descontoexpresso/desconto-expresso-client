@@ -90,12 +90,15 @@ function FormularioCadastrarProduto() {
     const carregandoCategoria = categoria.descricaoCategoria === '';
 
     return (
-        <div className="container flex flex-col mx-auto items-center">
-            <h1 className="text-4xl text-center my-8">Cadastrar Produto</h1>
+        <div
+            className="container flex flex-col items-center justify-center mx-auto bg-fundo-cadastros2 bg-cover bg-center bg-fixed"
+            style={{ minHeight: "100vh", minWidth: "100%" }}
+        >
+            <h1 className="text-4xl text-center my-8 mb-1 text-verde-escuro">Cadastrar um novo Produto</h1>
 
             <form onSubmit={gerarNovoProduto} className="flex flex-col w-1/2 gap-4">
                 <div className="flex flex-col gap-2">
-                    <label htmlFor="nomeProduto">Nome do Produto</label>
+                    <label className="text-verde-escuro font-semibold" htmlFor="nomeProduto">Nome do Produto</label>
                     <input
                         value={produto.nomeProduto}
                         onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
@@ -107,7 +110,7 @@ function FormularioCadastrarProduto() {
                     />
                 </div>
                 <div className="flex flex-col gap-2">
-                    <label htmlFor="descricaoProduto">Descrição do Produto</label>
+                    <label className="text-verde-escuro font-semibold" htmlFor="descricaoProduto">Descrição do Produto</label>
                     <input
                         value={produto.descricaoProduto}
                         onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
@@ -119,11 +122,11 @@ function FormularioCadastrarProduto() {
                     />
                 </div>
                 <div className="flex flex-col gap-2">
-                    <label htmlFor="estoque">Estoque do Produto</label>
+                    <label className="text-verde-escuro font-semibold" htmlFor="estoque">Estoque do Produto</label>
                     <input
                         value={produto.estoque}
                         onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-                        type="number"
+                        type="text"
                         placeholder="Estoque Disponível do Produto"
                         name="estoque"
                         required
@@ -131,7 +134,7 @@ function FormularioCadastrarProduto() {
                     />
                 </div>
                 <div className="flex flex-col gap-2">
-                    <label htmlFor="preco">Preço do Produto</label>
+                    <label className="text-verde-escuro font-semibold" htmlFor="preco">Preço do Produto</label>
                     <input
                         value={produto.preco}
                         onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
@@ -143,7 +146,7 @@ function FormularioCadastrarProduto() {
                     />
                 </div>
                 <div className="flex flex-col gap-2">
-                    <label htmlFor="dataValidade">Data de Validade do Produto</label>
+                    <label className="text-verde-escuro font-semibold" htmlFor="dataValidade">Data de Validade do Produto</label>
                     <input
                         value={produto.dataValidade}
                         onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
@@ -155,7 +158,7 @@ function FormularioCadastrarProduto() {
                     />
                 </div>
                 <div className="flex flex-col gap-2">
-                    <label htmlFor="fotoProduto">Foto do Produto</label>
+                    <label className="text-verde-escuro font-semibold" htmlFor="fotoProduto">Foto do Produto</label>
                     <input
                         value={produto.fotoProduto}
                         onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
@@ -167,17 +170,18 @@ function FormularioCadastrarProduto() {
                     />
                 </div>
                 <div className="flex flex-col gap-2">
-                    <p>Categoria do Produto</p>
-                    <select name="categoria" id="categoria" className='border p-2 border-slate-800 rounded' onChange={(e) => setCategoria(categorias.find(c => c.id === parseInt(e.target.value))!)}>
+                    <p className="text-verde-escuro font-semibold">Categoria do Produto</p>
+                    <select name="categoria" id="categoria" className='border p-2 border-slate-800 rounded h-10' onChange={(e) => setCategoria(categorias.find(c => c.id === parseInt(e.target.value))!)}>
                         <option value="" disabled>Selecione uma Categoria</option>
                         {categorias.map((categoria) => (
                             <option key={categoria.id} value={categoria.id}>{categoria.nomeCategoria}</option>
                         ))}
                     </select>
                 </div>
-                <button disabled={carregandoCategoria} type='submit' className='rounded disabled:bg-slate-200 bg-indigo-400 hover:bg-indigo-800 text-white font-bold w-1/2 mx-auto block py-2'>
+                <button disabled={carregandoCategoria} type='submit' className="rounded text-slate-100 bg-verde-escuro hover:bg-verde-medio-hover text-white w-1/2 py-2 mx-auto block mt-15 transition-colors duration-300 ease-in-out hover:delay-300 mb-4">
                     {carregandoCategoria ? <span>Carregando</span> : 'Cadastrar'}
                 </button>
+
             </form>
         </div>
     );

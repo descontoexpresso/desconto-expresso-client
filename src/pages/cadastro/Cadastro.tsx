@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import Usuario from '../../models/Usuario'
 import { cadastrarUsuario } from '../../services/Service'
 import './Cadastro.css'
+import axios from 'axios'
 
 function Cadastro() {
 
@@ -93,6 +94,33 @@ function Cadastro() {
 
   }
 
+  const buscarCEP = async (cep: string) => {
+    try {
+      const response = await axios.get(`https://viacep.com.br/ws/${cep}/json/`);
+      const data = response.data;
+      setUsuario(prevState => ({
+        ...prevState,
+        rua: data.logradouro,
+        bairro: data.bairro,
+        cidade: data.localidade,
+      }));
+    } catch (error) {
+      console.error('Erro ao buscar CEP:', error);
+    }
+  };
+
+  const handleCEPChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const { value } = e.target;
+    setUsuario(prevState => ({
+      ...prevState,
+      cep: value,
+    }));
+
+    if (value.length === 8) {
+      buscarCEP(value);
+    }
+  };
+
   return (
     <>
       <div className="flex flex-col justify-bet-h-screen font-ligth p-4 bg-fundo-login bg-cover bg-center bg-fixed" style={{ minHeight: "100vh", minWidth: "100%" }}>
@@ -166,6 +194,19 @@ function Cadastro() {
             </div>
 
             <div className="flex flex-col w-full">
+              <label className='text-verde-escuro' htmlFor="cep">CEP</label>
+              <input
+                type="text"
+                id="cep"
+                name="cep"
+                placeholder="CEP"
+                className="border-2 border-slate-700 rounded p-2"
+                value={usuario.cep}
+                onChange={handleCEPChange}
+              />
+            </div>
+
+            <div className="flex flex-col w-full">
               <label className='text-verde-escuro' htmlFor="cidade">Cidade</label>
               <input
                 type="text"
@@ -187,19 +228,6 @@ function Cadastro() {
                 placeholder="Bairro"
                 className="border-2 border-slate-700 rounded p-2"
                 value={usuario.bairro}
-                onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-              />
-            </div>
-
-            <div className="flex flex-col w-full">
-              <label className='text-verde-escuro' htmlFor="cep">CEP</label>
-              <input
-                type="text"
-                id="cep"
-                name="cep"
-                placeholder="CEP"
-                className="border-2 border-slate-700 rounded p-2"
-                value={usuario.cep}
                 onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
               />
             </div>

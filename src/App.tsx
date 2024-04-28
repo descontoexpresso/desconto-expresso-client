@@ -12,11 +12,11 @@ import FormularioCadastrarCategoria from "./components/categorias/formularioCate
 import DeletarCategoria from "./components/categorias/deletarCategoria/DeletarCategoria";
 import ListaProdutos from "./components/produtos/listaProdutos/ListaProdutos";
 import FormularioEditarProduto from "./components/produtos/formularioProduto/FormularioEditarProduto";
-import About from "./pages/about/About";
 import FormularioCadastrarProduto from "./components/produtos/formularioProduto/FormularioCadastrarProduto";
 import DeletarProduto from "./components/produtos/deletarProduto/DeletarProduto";
 import ProdutoPage from "./pages/product/ProductPage";
 import Perfil from "./pages/perfil/Perfil";
+import SobreNos from "./pages/sobrenos/SobreNos"
 
 function App() {
   return (
@@ -44,7 +44,7 @@ function App() {
                 element={<DeletarCategoria />}
               />
               <Route path="/produtos" element={<ListaProdutos />} />
-              <Route path="/about" element={<About />} />
+              <Route path="/sobreNos" element={<SobreNos />} />
               <Route path="/perfil" element={<Perfil />} />
               <Route
                 path="/editarProduto/:id"

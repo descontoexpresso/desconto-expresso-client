@@ -49,7 +49,7 @@ function Navbar() {
                 </div>
               </div>
             </div>
-            <Link to="/about" className="hover:text-verde-escuro transition-colors duration-400 ease-in-out transition-all duration-500">
+            <Link to="/sobreNos" className="hover:text-verde-escuro transition-colors duration-400 ease-in-out transition-all duration-500">
               Sobre Nós
             </Link>
             <div className="relative dropdown">

@@ -8,6 +8,7 @@ export default {
         "azul-escuro-hover": "#34618B",
         "azul-claro": "#28C0F6",
         "azul-claro-hover": "#76B8D0",
+        "azul-sobre-nos": "#4077AA",
         "verde-medio": "#209B38",
         "verde-medio-hover": "#63AC71",
         "verde-claro": "#AAD32D",

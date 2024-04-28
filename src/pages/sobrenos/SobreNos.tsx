@@ -7,9 +7,10 @@ import sobreNos from '../../assets/sobrenos.png';
 export default function SobreNos() {
     return (
         <>
-            <div className='flex flex-wrap justify-center items-center gap-10 mt-10 space-x-2'> 
-                <div className="nossa-missao">
-                    <img src={nossaMissao} alt="Nossa Missão" className="w-96" /> 
+            
+            <div className='flex flex-wrap justify-center items-center gap-10 mt-10 space-x-2'>
+            <div className="sobre-nos">
+                    <img src={sobreNos} alt="Sobre Nós" className="w-96" />
                 </div>
                 <div className='w-96'>
                     <h1 className='font-bold text-verde-escuro text-2xl mb-3'>Nossa Missão</h1>
@@ -19,10 +20,11 @@ export default function SobreNos() {
                         Através da nossa plataforma, não apenas proporcionamos acesso a alimentos de qualidade, mas também promovemos o orgulho e a dignidade de cada pessoa, reconhecendo sua necessidade e valorizando sua autonomia.
                     </p>
                 </div>
-            </div> 
-            
-            <div className='flex flex-wrap justify-center items-center gap-10 mt-10 space-x-2'>
-                <div className='w-96'>
+                
+                
+            </div>
+            <div className='flex flex-wrap justify-center items-center gap-10 mt-10 space-x-2'> 
+            <div className='w-96'>
                     <h1 className='font-bold text-verde-escuro text-2xl mb-3'>Sobre Nós</h1>
                     <p className='text-base text-verde-escuro'>
                         Compaixão e solidariedade guiam nossa missão no mercado online que estamos construindo, 
@@ -36,10 +38,11 @@ export default function SobreNos() {
                         em necessidade.
                     </p>
                 </div>
-                <div className="sobre-nos">
-                    <img src={sobreNos} alt="Sobre Nós" className="w-96" />
+            
+                <div className="nossa-missao">
+                    <img src={nossaMissao} alt="Nossa Missão" className="w-96" /> 
                 </div>
-            </div>
+            </div> 
 
             <div className='flex flex-wrap justify-center items-center gap-10 mt-10 bg-azul-sobre-nos text-white p-6 mx-64 mb-40'>
                 <h1>ODS 1 DA ONU - ERRADICAÇÃO DA POBREZA EXTREMA</h1>

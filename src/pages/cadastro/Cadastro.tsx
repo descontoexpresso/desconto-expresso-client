@@ -1,13 +1,13 @@
 import { ChangeEvent, FormEvent, useEffect, useState } from 'react'
 import { RotatingLines } from 'react-loader-spinner'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import Usuario from '../../models/Usuario'
 import { cadastrarUsuario } from '../../services/Service'
 import './Cadastro.css'
 
 function Cadastro() {
 
-  let navigate = useNavigate()
+  const navigate = useNavigate()
 
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const [confirmarSenhaUsuario, setConfirmarSenhaUsuario] = useState<string>("")
@@ -95,13 +95,13 @@ function Cadastro() {
 
   return (
     <>
-      <div className="flex flex-col justify-between min-h-screen font-bold p-4">
+      <div className="flex flex-col justify-bet-h-screen font-ligth p-4 bg-fundo-login bg-cover bg-center bg-fixed" style={{ minHeight: "100vh", minWidth: "100%" }}>
         <div className="flex justify-center items-center flex-grow">
-          <div className="fundoCadastro hidden lg:block"></div>
-          <form className='flex flex-col justify-center items-center w-2/3 gap-3' onSubmit={cadastrarNovoUsuario}>
-            <h2 className='text-slate-900 text-5xl'>Cadastrar</h2>
+          <div className="fundoCadastro hidden lg:block "></div>
+          <form className='flex flex-col justify-center items-center w-7/12 gap-3 bg-verde-claro-hover p-6 bg-opacity-50 rounded-lg shadow-lg' onSubmit={cadastrarNovoUsuario}>
+            <h2 className='text-verde-escuro text-5xl'>Cadastrar</h2>
             <div className="flex flex-col w-full">
-              <label htmlFor="nomeUsuario">Nome</label>
+              <label className='text-verde-escuro' htmlFor="nomeUsuario">Nome</label>
               <input
                 type="text"
                 id="nomeUsuario"
@@ -114,7 +114,7 @@ function Cadastro() {
             </div>
 
             <div className="flex flex-col w-full">
-              <label htmlFor="sobrenomeUsuario">Sobrenome</label>
+              <label className='text-verde-escuro' htmlFor="sobrenomeUsuario">Sobrenome</label>
               <input
                 type="text"
                 id="sobrenomeUsuario"
@@ -127,7 +127,7 @@ function Cadastro() {
             </div>
 
             <div className="flex flex-col w-full">
-              <label htmlFor="cadastroUnico">Cadastro Único</label>
+              <label className='text-verde-escuro' htmlFor="cadastroUnico">Cadastro Único</label>
               <input
                 type="number"
                 id="cadastroUnico"
@@ -140,7 +140,7 @@ function Cadastro() {
             </div>
 
             <div className="flex flex-col w-full">
-              <label htmlFor="dataNascimento">Data de Nascimento</label>
+              <label className='text-verde-escuro' htmlFor="dataNascimento">Data de Nascimento</label>
               <input
                 type="text"
                 id="dataNascimento"
@@ -153,7 +153,7 @@ function Cadastro() {
             </div>
 
             <div className="flex flex-col w-full">
-              <label htmlFor="telefone">Telefone</label>
+              <label className='text-verde-escuro' htmlFor="telefone">Telefone</label>
               <input
                 type="number"
                 id="telefone"
@@ -166,7 +166,7 @@ function Cadastro() {
             </div>
 
             <div className="flex flex-col w-full">
-              <label htmlFor="cidade">Cidade</label>
+              <label className='text-verde-escuro' htmlFor="cidade">Cidade</label>
               <input
                 type="text"
                 id="cidade"
@@ -179,7 +179,7 @@ function Cadastro() {
             </div>
 
             <div className="flex flex-col w-full">
-              <label htmlFor="bairro">Bairro</label>
+              <label className='text-verde-escuro' htmlFor="bairro">Bairro</label>
               <input
                 type="text"
                 id="bairro"
@@ -192,7 +192,7 @@ function Cadastro() {
             </div>
 
             <div className="flex flex-col w-full">
-              <label htmlFor="cep">CEP</label>
+              <label className='text-verde-escuro' htmlFor="cep">CEP</label>
               <input
                 type="text"
                 id="cep"
@@ -205,7 +205,7 @@ function Cadastro() {
             </div>
 
             <div className="flex flex-col w-full">
-              <label htmlFor="rua">Rua</label>
+              <label className='text-verde-escuro' htmlFor="rua">Rua</label>
               <input
                 type="text"
                 id="rua"
@@ -218,7 +218,7 @@ function Cadastro() {
             </div>
 
             <div className="flex flex-col w-full">
-              <label htmlFor="numeroCasa">Número Casa</label>
+              <label className='text-verde-escuro' htmlFor="numeroCasa">Número Casa</label>
               <input
                 type="text"
                 id="numeroCasa"
@@ -231,7 +231,7 @@ function Cadastro() {
             </div>
 
             <div className="flex flex-col w-full">
-              <label htmlFor="emailUsuario">Email</label>
+              <label className='text-verde-escuro' htmlFor="emailUsuario">Email</label>
               <input
                 type="text"
                 id="emailUsuario"
@@ -243,7 +243,7 @@ function Cadastro() {
               />
             </div>
             <div className="flex flex-col w-full">
-              <label htmlFor="fotoUsuario">Foto</label>
+              <label className='text-verde-escuro' htmlFor="fotoUsuario">Foto</label>
               <input
                 type="text"
                 id="fotoUsuario"
@@ -255,7 +255,7 @@ function Cadastro() {
               />
             </div>
             <div className="flex flex-col w-full">
-              <label htmlFor="senhaUsuario">Senha</label>
+              <label className='text-verde-escuro' htmlFor="senhaUsuario">Senha</label>
               <input
                 type="password"
                 id="senhaUsuario"
@@ -267,7 +267,7 @@ function Cadastro() {
               />
             </div>
             <div className="flex flex-col w-full">
-              <label htmlFor="confirmarSenhaUsuario">Confirmar Senha</label>
+              <label className='text-verde-escuro' htmlFor="confirmarSenhaUsuario">Confirmar Senha</label>
               <input
                 type="password"
                 id="confirmarSenhaUsuario"
@@ -278,11 +278,9 @@ function Cadastro() {
                 onChange={(e: ChangeEvent<HTMLInputElement>) => handleConfirmarSenhaUsuario(e)}
               />
             </div>
-            <div className="flex justify-around w-full gap-8">
-              <button className='rounded text-white bg-red-400 hover:bg-red-700 w-1/2 py-2' onClick={back}>
-                Cancelar
-              </button>
-              <button className='rounded text-white bg-indigo-400 hover:bg-indigo-900 w-1/2 py-2' type='submit'>
+            <div className="flex flex-col items-center justify-center w-full gap-8">
+              
+              <button className='rounded bg-verde-escuro w-1/2 py-2 hover:bg-verde-medio-hover text-white transition-colors duration-300 ease-in-out hover:delay-300' type='submit'>
                 {isLoading ? <RotatingLines
                   strokeColor="white"
                   strokeWidth="5"
@@ -293,7 +291,11 @@ function Cadastro() {
                   <span>Cadastrar</span>
                 }
               </button>
+              <Link to="/login" className="text-red-700  duration-400 ease-in-out transition-all duration-500 hover:underline">
+            Cancelar
+              </Link>
             </div>
+
           </form>
         </div>
       </div>

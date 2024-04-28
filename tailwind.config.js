@@ -21,6 +21,7 @@ export default {
       backgroundImage: {
         "fundo-cadastros": "url('./src/assets/fundoCad.png')",
         "fundo-cadastros2": "url('./src/assets/fundoCad2.png')",
+        "fundo-login": "url('./src/assets/fundologin.png')"
       },
     },
   },

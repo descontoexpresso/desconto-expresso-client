@@ -4,7 +4,7 @@ import nossaMissao from '../../assets/nossamissao.png';
 import sobreNos from '../../assets/sobrenos.png';
 
 
-export default function About() {
+export default function SobreNos() {
     return (
         <>
             <div className='flex flex-wrap justify-center items-center gap-10 mt-10 space-x-2'> 

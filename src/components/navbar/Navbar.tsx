@@ -59,6 +59,7 @@ function Navbar() {
               <div className="absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 dropdown-content">
                 <div className="py-1 transition-colors duration-800 ease-in-out" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
                   <Link to="/perfil" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">Perfil</Link>
+                  <Link to="/login" onClick={logout} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">Login</Link>
                   <Link to="/home" onClick={logout} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">Sair</Link>
                 </div>
               </div>
